@@ -8,12 +8,11 @@
        ios_l3_interface:
           name: loop {{ item.na }}
           ipv4: "{{ item.ip }}"
-        state: present
-      with_items:
-        - { na: 5, ip: "192.168.5.1/24" }
-        - { na: 6, ip: "192.168.6.1/24" }
-        - { na: 7, ip: "192.168.7.1/24" }
-    - name: Show Int
+       with_items:
+         - { na: 5, ip: "192.168.5.1/24" }
+         - { na: 6, ip: "192.168.6.1/24" }
+         - { na: 7, ip: "192.168.7.1/24" }
+     - name: Show Int
       ios_command:
         commands:
           - show ip int br

@@ -4,10 +4,10 @@
   gather_facts: no
 
   tasks:
-      - name: loopback
-      ios_l3_interface:
-        name: loop {{ item.na }}
-        ipv4: "{{ item.ip }}"
+     - name: loopback
+       ios_l3_interface:
+          name: loop {{ item.na }}
+          ipv4: "{{ item.ip }}"
         state: present
       with_items:
         - { na: 5, ip: "192.168.5.1/24" }

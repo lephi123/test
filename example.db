@@ -1,0 +1,16 @@
+$TTL	86400
+@		IN SOA	stationX.domainX.com. root.domainX.com. (
+					42		; serial (d. adams)
+					3H		; refresh
+					15M		; retry
+					1W		; expiry
+					1D )		; minimum
+	        	IN NS		stationX.domainX.com.
+			IN MX 		10 stationX
+		1D    IN A		192.168.1.1				; web site 
+stationX	1D	IN A		192.168.1.1
+stationX	1D	IN A		10.0.0.1
+www		1D	IN CNAME	stationX				; web site
+mail	    	1D	IN CNAME	stationX
+ftp	    	1D	IN CNAME	stationX
+		
